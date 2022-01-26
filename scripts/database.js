@@ -177,3 +177,11 @@ export const findCities = (walkerCities) => {
 
     return matchingCities
 }
+
+// export const getCities = () => {
+//     return database.cities.map(city => ({...city}))
+// }
+
+// export const getWalkerCities = () => {
+//     return database.walkerCities.map(assignment => ({...assignment}))
+// }

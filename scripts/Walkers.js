@@ -9,7 +9,10 @@ document.addEventListener(
 
             for (const walker of walkers) {
                 if (walker.id === parseInt(walkerId)) {
-                    window.alert(`${walker.name} services ${walker.city}`)
+                    const assignments = filterWalkerCities(walker)
+                    const cities = assignedCityNames(assignments)
+              
+                    window.alert(`${walker.name} services ${cities}`)
                 }
             }
         }
@@ -76,19 +79,5 @@ const assignedCityNames = (assignments) => {
     return cityNames
 }
 
-// export const getCities = () => {
-//     return database.cities.map(city => ({...city}))
-// }
 
-// export const getWalkerCities = () => {
-//     return database.walkerCities.map(assignment => ({...assignment}))
-// }
 
-// for (const walker of walkers) {
-//     if (walker.id === parseInt(walkerId)) {
-//         const assignments = filterWalkerCitiesByWalker(walker)
-//         const cities = assignedCityNames(assignments)
-  
-//         window.alert(`${walker.name} services ${cities}`)
-//     }
-// }
